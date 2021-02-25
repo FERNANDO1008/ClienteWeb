@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cookies</title>
+    <script type="text/javascript" src="js/cookies.js"></script>
+    <script>
+        window.onload = function() {
+            var c = getCookie("contador");
+            if (c == null) {
+                setCookie('contador', 1);
+            } else {
+                setCookie('contador', ++c);
+            }
+            var repintar = document.getElementById("resultado");
+            repintar.innerHTML = 'Nro de visitas ' + c;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>contador de vistas</h1>
+    <p id="resultado"></p>
+</body>
+
+</html>
